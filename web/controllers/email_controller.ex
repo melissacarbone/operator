@@ -26,6 +26,10 @@ defmodule Operator.EmailController do
     end
   end
 
+  def preview conn, %{"template" => template} do
+    render conn, "#{template}.html", %{vars: %{shipment_number: "H1234"} }
+  end
+
   defp email_templates do
     ["shipment_shipped", "rando_template"]
   end

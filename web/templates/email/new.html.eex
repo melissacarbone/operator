@@ -12,6 +12,9 @@
         to: email_path(@conn, :send, %{"template" => template}),
         method: :post,
         class: "btn btn-primary" %>
+      <%= link "Preview",
+        to: email_path(@conn, :preview, %{"template" => template}),
+        class: "btn btn-warning" %>
       </td>
     </tr>
   <% end %>

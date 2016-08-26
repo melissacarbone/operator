@@ -7,6 +7,7 @@ defmodule Operator.Router do
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug Operator.Locale
   end
 
   pipeline :api do
@@ -18,6 +19,7 @@ defmodule Operator.Router do
 
     get "/", PageController, :index
     resources "/emails", EmailController, only: [:index, :new]
+    get "/emails/preview", EmailController, :preview
     post "/emails/send", EmailController, :send
   end
 
