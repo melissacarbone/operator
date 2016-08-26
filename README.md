@@ -38,4 +38,4 @@ keeping things in sync.  It's nifty!
 
 * Rabbitmq consumer
 * Other templates
-* Interesting Business Logic
+* Interesting Business Logic.  How about "don't send emails between 12-8am"
