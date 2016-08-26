@@ -1,0 +1,19 @@
+<h2>Available Templates</h2>
+
+<table class="table">
+  <thead>
+    <th>Template</th>
+    <th></th>
+  </thead>
+  <%= for template <- @email_templates do %>
+    <tr>
+      <td><%= template %></td>
+      <td><%= link "Send",
+        to: email_path(@conn, :send, %{"template" => template}),
+        method: :post,
+        class: "btn btn-primary" %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+

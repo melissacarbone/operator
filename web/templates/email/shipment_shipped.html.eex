@@ -1,0 +1,3 @@
+<h3>HI YOUR SHIPMENT HAS SHIPPED</h3>
+
+Your shipment number <%= @vars["shipment_number"] %> has shipped.  yay!

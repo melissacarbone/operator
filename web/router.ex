@@ -17,6 +17,8 @@ defmodule Operator.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    resources "/emails", EmailController, only: [:index, :new]
+    post "/emails/send", EmailController, :send
   end
 
   # Other scopes may use custom stacks.
