@@ -39,7 +39,9 @@ defmodule Operator.Mixfile do
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
      {:mailgun, "~> 0.1.2"},
-     {:poison, "~> 2.0", override: true}]
+     {:poison, "~> 2.0", override: true},
+     {:amqp_client, git: "https://github.com/dsrosario/amqp_client.git", branch: "erlang_otp_19", override: true},
+     {:amqp, "~> 0.1.4"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
